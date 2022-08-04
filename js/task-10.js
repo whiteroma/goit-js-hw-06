@@ -29,12 +29,15 @@ const btnCreate = document.querySelector("button[data-create");
 const btnDestroy = document.querySelector("button[data-destroy");
 const boxes = document.querySelector("#boxes");
 
+let size = 30
+
 const newBoxes = (amount) => {
   const el = [];
   for (let i = 0; i < amount; i++) {
+    size += 10;
     const div = document.createElement("div");
-    div.style.height = `${30 + 10 * i}px`;
-    div.style.width = `${30 + 10 * i}px`;
+    div.style.height = size + 'px';
+    div.style.width = size + 'px';
     div.style.background = getRandomHexColor();
     el.push(div);
   }
@@ -42,6 +45,7 @@ const newBoxes = (amount) => {
 };
 
 const destroyBoxes = () => {
+  size = 30;
   boxes.innerHTML = "";
 };
 
@@ -53,3 +57,4 @@ btnCreate.addEventListener("click", () => {
 btnDestroy.addEventListener("click", () => {
   destroyBoxes.call();
 });
+

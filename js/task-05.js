@@ -9,8 +9,8 @@ const inp = document.querySelector("#name-input");
 const out = document.querySelector("#name-output");
 
 inp.addEventListener("input", (event) => {
-  out.textContent = event.currentTarget.value;
   if (event.currentTarget.value === "") {
     out.textContent = "Anonymous";
   }
+  out.textContent = event.currentTarget.value;
 });

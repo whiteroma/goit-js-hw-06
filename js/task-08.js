@@ -28,9 +28,8 @@ function handleForm(event) {
   } = event.currentTarget;
   if (email.value === "" || password.value === "") {
     return alert("Все поля должны быть заполнены!");
-  } else {
+  } 
     const user = { email: email.value, password: password.value };
     console.log(user);
-  }
   event.currentTarget.reset();
 }
