@@ -5,25 +5,23 @@
 // Добавит элементу класс item.
 // После чего вставит все <li> за одну операцию в список ul#ingredients.
 
-
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
 const arrayEl = [];
 
-
-ingredients.forEach(ingredient => {
-  const el = document.createElement('li');
-  el.classList.add('item');
-el.textContent = ingredient;
-arrayEl.push(el)
+ingredients.forEach((ingredient) => {
+  const el = document.createElement("li");
+  el.classList.add("item");
+  el.textContent = ingredient;
+  arrayEl.push(el);
 });
 
-const ulEl = document.querySelector('ul#ingredients');
+const ulEl = document.querySelector("ul#ingredients");
 ulEl.append(...arrayEl);
