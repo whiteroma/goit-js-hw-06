@@ -11,6 +11,4 @@ const inpSt = document.querySelector("span#text");
 
 inp.addEventListener("input", (event) => {
   inpSt.style.fontSize = `${event.currentTarget.value}px`;
-
-  console.log(`${event.currentTarget.value}px`);
 });

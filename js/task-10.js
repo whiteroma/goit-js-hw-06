@@ -54,7 +54,5 @@ btnCreate.addEventListener("click", () => {
   boxes.append(...boxesToAdd);
 });
 
-btnDestroy.addEventListener("click", () => {
-  destroyBoxes.call();
-});
+btnDestroy.addEventListener("click", destroyBoxes);
 
